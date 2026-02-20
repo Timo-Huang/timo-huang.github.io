@@ -445,46 +445,93 @@ body {
   text-decoration: none;
 }
 
-/* Responsive */
+/* Responsive tweaks for tablet and mobile */
+
+/* 平板（含大螢幕手機橫放） */
 @media (max-width: 900px) {
+  .hero {
+    padding-top: 3.75rem;
+  }
+
   .hero-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
+
   .hero-card {
-    order: -1;
+    order: -1;              /* 卡片上移到人物介紹前面 */
   }
+
   .card-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr;   /* 研究卡片一欄顯示 */
   }
+
   .metrics-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
   .awards-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
   .two-column {
     grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 720px) {
+/* 手機（iPhone 等） */
+@media (max-width: 640px) {
+  .container {
+    padding: 0 1.1rem;      /* 左右多留一點白邊，避免貼邊 */
+  }
+
   .nav-container {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0.5rem 1rem;
-    padding: 0.25rem 0.75rem;
+    gap: 0.3rem 0.7rem;
+    padding: 0.4rem 0.75rem;
   }
+
   .main-nav a {
-    margin-left: 0.75rem;
-    font-size: 0.8rem;
+    margin-left: 0.65rem;
+    font-size: 0.78rem;
   }
+
   .hero {
-    padding-top: 3.5rem;
+    padding: 3.25rem 0 2.5rem;
   }
+
+  .hero-text h1 {
+    font-size: 1.9rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.96rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .metrics-grid {
     grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
   }
+
+  .metric {
+    padding: 0.9rem 0.5rem;
+  }
+
   .awards-grid {
     grid-template-columns: 1fr;
+  }
+
+  .hero-card,
+  .card,
+  .pub-item,
+  .timeline-item,
+  .contact-box {
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
   }
 }
