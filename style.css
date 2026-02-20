@@ -538,4 +538,33 @@ body {
   .contact-box {
     box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
   }
+
+  /* 新增：縮小手機版 section padding，讓內容不會太高 */
+  .section {
+    padding: 2.25rem 0 !important;    /* 從 3.5rem 縮到 2.25rem */
+  }
+
+  .section-header {
+    margin-bottom: 1.4rem;            /* header 下面間距也縮小 */
+  }
+
+  .hero {
+    padding: 2.5rem 0 2rem !important; /* Hero 區塊特別收緊 */
+  }
+
+  .card-grid,
+  .metrics-grid,
+  .awards-grid {
+    gap: 0.9rem;                      /* 卡片間距縮小 */
+  }
+
+  .card,
+  .pub-item,
+  .timeline-item {
+    padding: 1.1rem 1rem;             /* 卡片內 padding 縮小 */
+  }
+
+  .section-header h2 {
+    font-size: 1.45rem;               /* section 標題字體略小 */
+  }
 }
