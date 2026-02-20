@@ -17,6 +17,10 @@
   --radius-pill: 999px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Reset */
 *,
 *::before,
