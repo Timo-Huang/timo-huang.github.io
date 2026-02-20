@@ -583,6 +583,25 @@ body {
 
   .pub-item {
     padding: 1rem 0.9rem;            /* pub-item 內 padding 再收緊 */
+  }
+   /* 新增：超強版 DOI 換行 */
+  .pub-citation a[href*="doi.org"] {
+    display: inline-block;           /* 讓連結可以被壓縮 */
+    max-width: 95%;                  /* 最多佔 95% 寬度 */
+    word-break: break-all !important;
+    overflow-wrap: anywhere !important;
+    hyphens: manual;
+  }
+
+  /* 第一篇 citation 特別處理（Sardina 那篇 DOI 特別長） */
+  .pub-list > article:nth-child(1) .pub-citation {
+    font-size: 0.78rem !important;
+  }
+
+  /* 確保 pub-item 不會被文字撐爆 */
+  .pub-item {
+    word-wrap: break-word;
+    overflow: hidden;
     
   }
 }
