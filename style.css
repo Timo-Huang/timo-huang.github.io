@@ -636,4 +636,6 @@ body {
     word-wrap: break-word;
     overflow-wrap: break-word;
   }
+  /* 手機版導航列：滑動時實心背景，不透明 */
+  .site
 }
