@@ -492,6 +492,30 @@ body {
 
 /* 手機（iPhone 等） */
 @media (max-width: 640px) {
+  /* 導航列強制實心背景，滑動不透明 */
+  .site-header,
+  .nav-container {
+    background: rgba(247, 247, 249, 0.98) !important;  /* 實心白底 */
+    backdrop-filter: none !important;                 /* 移除模糊 */
+    -webkit-backdrop-filter: none !important;         /* iPhone Safari */
+    border-bottom: 1px solid rgba(15, 23, 42, 0.08);  /* 底線分隔 */
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);    /* 輕微陰影 */
+  }
+
+  .main-nav {
+    background: transparent !important;               /* 導航內不重複背景 */
+  }
+
+  .main-nav a {
+    background: transparent !important;               /* 連結不透明 */
+    color: var(--text-dark) !important;               /* 深色文字 */
+  }
+
+  /* 確保導航文字清晰 */
+  .site-header * {
+    color: #1f2937 !important;
+    text-shadow: none !important;
+  }
   .timeline-meta {
       font-size: 0.85rem;
   }
