@@ -486,7 +486,7 @@ body {
 /* 手機（iPhone 等） */
 @media (max-width: 640px) {
   .container {
-    padding: 0 1.1rem;                /* 左右多留白邊 */
+    padding: 0 1.1rem;
   }
 
   .nav-container {
@@ -502,7 +502,7 @@ body {
   }
 
   .hero {
-    padding: 2.5rem 0 2rem !important; /* Hero 特別收緊 */
+    padding: 2.5rem 0 2rem !important;
   }
 
   .hero-text h1 {
@@ -547,6 +547,10 @@ body {
     margin-bottom: 1.4rem;
   }
 
+  .section-header h2 {
+    font-size: 1.45rem;
+  }
+
   .card-grid,
   .metrics-grid,
   .awards-grid {
@@ -558,11 +562,7 @@ body {
     padding: 1.1rem 1rem;
   }
 
-  .section-header h2 {
-    font-size: 1.45rem;
-  }
-
-  /* Publications 強制換行（解決溢出） */
+  /* Publications 完整修復 */
   .pub-list {
     padding: 0;
   }
@@ -574,49 +574,38 @@ body {
     overflow: hidden;
   }
 
-  .pub-citation {
-    font-size: 0.8rem !important;
+  .pub-main {
+    font-size: 0.85rem;
     line-height: 1.4;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    hyphens: auto;
+    margin-bottom: 0.3rem;
   }
 
-  .pub-citation a {
-    font-size: 0.75rem !important;
+  .pub-meta {
+    font-size: 0.78rem;
+    color: #666;
+    margin-bottom: 0.4rem;
+  }
+
+  .pub-meta span {
     display: inline-block;
-    max-width: 100%;
-    word-break: break-all !important;
-    overflow-wrap: anywhere !important;
-    padding: 0.25rem 0.35rem;
-    background: rgba(197, 5, 12, 0.08);
-    border-radius: 4px;
-    border: 1px solid rgba(197, 5, 12, 0.2);
-    margin-top: 0.3rem;
-    text-align: center;
-  }
-
-  /* 第一篇特別處理（最長 DOI） */
-  .pub-list > article:nth-child(1) .pub-citation {
-    font-size: 0.78rem !important;
+    margin-right: 0.6rem;
+    padding: 0.1rem 0.3rem;
+    background: #f3f4f6;
+    border-radius: 3px;
   }
 
   .pub-note {
     font-size: 0.82rem;
-    margin-top: 0.4rem;
+    margin: 0.4rem 0 0.5rem 0;
   }
-
-  .pub-year {
-  font-weight: 500;
-  color: #666;
-}
 
   .pub-link {
-    margin-top: 0.5rem;
+    margin-top: 0;
     text-align: center;
   }
-  
-  .pub-link a {
+
+  .pub-link a,
+  .pub-citation a {
     display: inline-block;
     padding: 0.3rem 0.8rem;
     background: rgba(197, 5, 12, 0.08);
@@ -625,5 +614,15 @@ body {
     border-radius: 20px;
     font-size: 0.8rem;
     text-decoration: none !important;
+    word-break: break-all !important;
+    max-width: 100%;
+  }
+
+  /* 舊版 citation 相容（若還在使用） */
+  .pub-citation {
+    font-size: 0.8rem !important;
+    line-height: 1.4;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 }
