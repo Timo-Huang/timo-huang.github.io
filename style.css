@@ -567,4 +567,22 @@ body {
   .section-header h2 {
     font-size: 1.45rem;               /* section 標題字體略小 */
   }
+  /* 新增：Publications 區塊手機版文字換行 */
+  .pub-citation {
+    font-size: 0.82rem !important;   /* 字體略小 */
+    word-wrap: break-word;           /* 強制長詞換行 */
+    overflow-wrap: break-word;       /* 長 DOI / URL 自動斷行 */
+    hyphens: auto;                   /* 自動斷字 */
+    line-height: 1.45;               /* 行高適中 */
+  }
+
+  .pub-citation a {
+    font-size: 0.8rem;               /* DOI 連結文字也縮小 */
+    word-break: break-all;           /* DOI 數字強制斷行 */
+  }
+
+  .pub-item {
+    padding: 1rem 0.9rem;            /* pub-item 內 padding 再收緊 */
+    
+  }
 }
